@@ -14,10 +14,11 @@ const fixedGetTitle = editor.getUpperTitle.bind(editor);
 console.log(fixedGetTitle());
 
 // Task 2: Arrow or Regular?
+
 const formHandler = {
   value: "initial",
-  onChange(newValue) {
-    this.value = newValue;
+  onChange: (newValue) => {
+    formHandler.value = newValue;
   },
 };
 
