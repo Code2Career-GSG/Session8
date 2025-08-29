@@ -47,8 +47,7 @@ const translator = {
 };
 
 function logLanguageInfo(getter) {
-  const boundGetter = getter.bind(translator);
-  console.log(boundGetter());
+  console.log(getter.call(translator));
 }
 
 logLanguageInfo(translator.getLanguage);
